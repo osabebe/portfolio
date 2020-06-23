@@ -3,19 +3,23 @@
   <% if user_signed_in? %>
     <% if current_user == @user || current_user.admin? %>
       <%= link_to "新規投稿へ", new_product_path %>
+      <% @products.each do |t| %>
+        <%= link_to "編集する", edit_product_path(t.id) %>
+       <% end %>
     <% end %>
   <% end %>
   <div>
     <% @products.each do |t| %>
       <div class="product">
         <div class="content">
-          作品名：<%= t.name %><br>
-          作品説明：<%= t.detail %><br>
+          <div class="product_name"><%= t.name %></div>
+          <div><%= simple_format(t.detail) %></div><br>
+          <div><%= t.language %></div>
         </div>
         <div class="content">
          <%= image_tag t.image_url, class:'product-image' %><br>
-         <%= link_to "作品ページへ", t.site_url, target: :_blank %>
-         <%= link_to "GitHubへ", t.github_url, target: :_blank %>
+         <%= link_to "作品ページへ", t.site_url, target: :_blank, class:'window' %>
+         <%= link_to "GitHubへ", t.github_url, target: :_blank, class:'git' %>
         </div>
       </div>
     <% end %>

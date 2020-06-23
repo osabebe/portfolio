@@ -1,0 +1,47 @@
+<%= form_for @profile do |f| %>
+   <br>
+   <%= f.label :名前 %>
+   <%= f.text_field :name_jp,size: 140 %>
+   <br>
+   <%= f.label :name %>
+   <%= f.text_field :name_en,size: 140 %>
+   <br>
+   <%= f.label :趣味 %>
+   <%= f.text_field :hobby,size: 140 %>
+   <br>
+   <%= f.label :特技 %>
+   <%= f.text_field :strong_point,size: 140 %>
+   <br>
+   <%= f.label :プロフィール画像 %>
+   <%= f.file_field :image %>
+   <br>
+   <%= f.label :経歴 %>
+   <%= f.text_area :career,size: 140 %>
+   <br>
+   <%= f.label :生年月日 %>
+   <%= f.text_field :birthday,size: 140 %>
+   <br>
+   <%= f.label :自己PR %>
+   <%= f.text_area :public_relations,size: 140 %>
+   <br>
+   <%= f.label :習得言語 %>
+   <%= f.text_area :language,size: 140 %>
+   <br>
+   <%= f.label :習得フレームワーク %>
+   <%= f.text_area :framework,size: 140 %>
+   <br>
+   <%= f.label :デプロイ %>
+   <%= f.text_area :deploy,size: 140 %>
+   <br>
+   <%= f.label :GitHubアカウント %>
+   <%= f.text_field :github_url,size: 140 %>
+   <br>
+   <%= f.label :Instagramアカウント %>
+   <%= f.text_field :instagram_url,size: 140 %>
+   <br>
+   <%= f.label :email %>
+   <%= f.text_field :email,size: 140 %>
+   <br>
+   <%= f.submit "編集する" %>
+   <br>
+<% end %>

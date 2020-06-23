@@ -29,4 +29,8 @@ header {
   text-decoration: none;
   color: #ffffff;
   font-weight: 800;
+  margin-right: 5px;
+}
+.border {
+  color: #ffffff;
 }

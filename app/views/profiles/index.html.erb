@@ -1,0 +1,52 @@
+<div class="e">
+  <% if user_signed_in? %>
+    <% if current_user == @user || current_user.admin? %>
+      <%= link_to "新規投稿へ", new_profile_path %>
+      <% @profiles.each do |t| %>
+       <%= link_to "編集する", edit_profile_path(t.id) %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <% @profiles.each do |t| %>
+    <div class="profile">
+      <div class="photo_name">
+        <%= image_tag t.image_url, class:'profile-image' %><br>
+        <div class="my-info">
+          <div class="name">
+            <div class="jp_name"><%= t.name_jp %></div>
+            <div class="en_name"><%= t.name_en %></div>
+          </div>
+          <div class="info">
+            <div>誕生日：<%= t.birthday %></div>
+            <div>趣味：<%= t.hobby %></div>
+            <div>特技：<%= t.strong_point %></div>
+            <div>e-mail：<%= t.email %></div>
+          </div>
+        </div>
+      </div>
+      <div class="public_relations">
+        <%= simple_format(t.public_relations) %><br>
+      </div>
+      <div class="index">History</div>
+      <div class="text"><%= simple_format(t.career) %></div><br>
+      <div class="index">Skill</div>
+      <div class="skill">Language</div>
+      <div class="skill_text"><%= simple_format(t.language) %></div><br>
+      <div class="skill">Framework</div>
+      <div class="skill_text"><%= simple_format(t.framework) %></div><br>
+      <div class="skill">Other</div>
+      <div class="skill_text_other"><%= simple_format(t.deploy) %></div><br>
+      <footer>
+        <div class="my_link">
+          <%= link_to t.instagram_url, target: :_blank do %>
+          <%= image_tag 'instagram.png', class:"image" %>
+          <% end %>
+          <%= link_to t.github_url, target: :_blank do %>
+            <%= image_tag 'https://img.icons8.com/windows/32/000000/github.png' %>
+          <% end %>
+        </div>
+        <div class="footer_name">©︎ 2020 AmiOsabe</div>
+      </footer>
+    </div>
+  <% end %>
+</div>

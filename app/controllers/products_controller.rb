@@ -3,9 +3,6 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
-  def show
-  end
-
   def new
     @product = Product.new
   end
@@ -20,9 +17,16 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @product = Product.find(params[:id])
   end
 
   def update
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to :action => "index", :id => @product.id
+    else
+      redirect_to :action => "new"
+    end
   end
 
   def destroy
@@ -30,6 +34,6 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :detail, :site_url, :production_period, :image, :github_url)
+    params.require(:product).permit(:name, :detail, :site_url, :production_period, :image, :github_url, :language)
   end
 end

@@ -1,0 +1,25 @@
+<%= form_for@product do |f| %>
+   <%= f.label :作品名 %>
+   <%= f.text_field :name,size: 140 %>
+   <br>
+   <%= f.label :制作期間 %>
+   <%= f.text_field :production_period,size: 140 %>
+   <br>
+   <%= f.label :この作品について %>
+   <%= f.text_area :detail,size: 140 %>
+   <br>
+   <%= f.label :使用言語 %>
+   <%= f.text_field :language,size: 140 %>
+   <br>
+   <%= f.label :画像 %>
+   <%= f.file_field :image %>
+   <br>
+   <%= f.label :サイトURL %>
+   <%= f.text_field :site_url,size: 140 %>
+   <br>
+   <%= f.label :GitHubURL %>
+   <%= f.text_field :github_url,size: 140 %>
+   <br>
+   <%= f.submit %>
+   <br>
+<% end %>
