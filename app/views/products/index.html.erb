@@ -1,0 +1,19 @@
+<div>
+  <h3>作品一覧</h3>
+  <%= link_to "新規投稿へ", new_product_path %>
+  <div>
+    <% @products.each do |t| %>
+      <div class="product">
+        <div class="content">
+          作品名：<%= t.name %><br>
+          作品説明：<%= t.detail %><br>
+        </div>
+        <div class="content">
+         <%= image_tag t.image_url, class:'product-image' %><br>
+         <%= link_to "作品ページへ", t.site_url, target: :_blank %>
+         <%= link_to "GitHubへ", t.github_url, target: :_blank %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
