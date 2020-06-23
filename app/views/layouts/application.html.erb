@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="title">ami</div>
+      <div>
+      <span><%= link_to "Top", class:"link" %></span>
+      <span><%= link_to "Profile", class:"link" %></span>
+      <span><%= link_to "Products", products_path, class:"link" %></span>
+      <span><%= link_to "Articles", class:"link" %></span>
+      <span><%= link_to "Contacts", class:"link" %></span>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
