@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .product-image{
-  max-width: 90%;
+  max-width: 120%;
+  margin-left: 50px;
+  margin-top: 10px;
 }
 .product{
   background-color: #F3F3F2;
@@ -12,5 +14,17 @@
   display: flex;
 }
 .content{
-  width: 50%;
+  width: 45%;
+  margin-right: 50px;
+}
+.window{
+  color: #727171;
+  margin-left: 50px;
+}
+.git{
+  color: #727171;
+}
+.product_name{
+  font-size: 30px;
+  font-weight: 600;
 }
