@@ -1,0 +1,13 @@
+<%= form_for(@article, :url => { controller:'articles', action:'create'})do |f| %>
+  <%= f.label :画像 %>
+  <%= f.file_field :image %>
+  <br>
+  <%= f.label :URL %>
+  <%= f.text_field :site_url,size: 140 %>
+  <br>
+  <%= f.label :書いた日 %>
+  <%= f.text_field :date,size: 140 %>
+  <br>
+  <%= f.submit %>
+  <br>
+<% end %>
