@@ -1,0 +1,10 @@
+<%= form_for @top do |f| %>
+  <%= f.label :ニュース %>
+  <%= f.text_area :news,size: 140 %>
+  <br>
+  <%= f.label :自己紹介 %>
+  <%= f.text_area :introduction,size: 140 %>
+  <br>
+  <%= f.submit %>
+  <br>
+<% end %>
