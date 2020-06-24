@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :products, only:[:index, :new, :create, :edit, :update]
   resources :profiles, only:[:index, :new, :create, :edit, :update]
   resources :tops, only:[:index, :new, :create, :edit, :update]
+  resources :articles
   root 'products#index'
 end

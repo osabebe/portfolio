@@ -1,0 +1,29 @@
+<div>
+  <% if user_signed_in? %>
+    <% if current_user == @user || current_user.admin? %>
+      <%= link_to "新規投稿へ", new_article_path %>
+    <% end %>
+  <% end %>
+  <div class="article_title">Article</div>
+  <div class="article">
+    <% unless @articles.present? %>
+      <div class="no_article">現在技術発信はしていません</div>
+    <% end %>
+    <% @articles.each do |t| %>
+      <div class="article_content">
+        <%= link_to t.site_url, target: :_blank do %>
+          <%= image_tag t.image_url, class:"article_image" %>
+        <% end %>
+        <div><%= t.date %></div>
+        <% if user_signed_in? %>
+          <% if current_user == @user || current_user.admin? %>
+          <div class="edit">
+            <%= link_to "編集する", edit_article_path(t.id) %>
+            <%= link_to "削除する", article_path(t.id), method: :delete %>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.article_image{
+  max-width: 500px;
+}
+.article_title{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+.article{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 7% 12%;
+}
+.article_content{
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 6%;
+}
+.edit{
+  display: flex;
+}
+.no_article{
+  font-size: 25px;
+  width: 50%;
+  margin: 3% 33%;
+}
