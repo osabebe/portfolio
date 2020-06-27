@@ -40,13 +40,6 @@
   padding: 20px;
   width: 50%;
 }
-.my_link{
-  display: flex;
-  width: 30%;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding-top: 1%;
-}
 .text{
   margin-left: 30%;
   width: 50%;
@@ -82,11 +75,10 @@
 .image{
   max-width: 29px;
 }
-footer{
-  background-color: #007bbb;
-  height: 80px;
-}
-.footer_name{
+.profile_title{
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  font-size: 13px;
+  color: #007bbb;
+  padding-top: 3%;
 }
