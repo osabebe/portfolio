@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :tops, only:[:index, :new, :create, :edit, :update]
   resources :contacts, only:[:index, :new, :create]
   resources :articles
-  root 'products#index'
+  root 'tops#index'
 end
