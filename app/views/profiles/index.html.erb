@@ -6,6 +6,7 @@
       <% end %>
     <% end %>
   <% end %>
+<div class="profile_title">Profile</div>
   <% @profiles.each do |t| %>
     <div class="profile">
       <div class="photo_name">
@@ -35,16 +36,5 @@
       <div class="skill_text"><%= simple_format(t.framework) %></div><br>
       <div class="skill">Other</div>
       <div class="skill_text_other"><%= simple_format(t.deploy) %></div><br>
-      <footer>
-        <div class="my_link">
-          <%= link_to t.instagram_url, target: :_blank do %>
-          <%= image_tag 'instagram.png', class:"image" %>
-          <% end %>
-          <%= link_to t.github_url, target: :_blank do %>
-            <%= image_tag 'https://img.icons8.com/windows/32/000000/github.png' %>
-          <% end %>
-        </div>
-        <div class="footer_name">©︎ 2020 AmiOsabe</div>
-      </footer>
     </div>
   <% end %>

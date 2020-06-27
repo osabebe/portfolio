@@ -1,0 +1,44 @@
+// Place all the styles related to the contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.input_field{
+  width: 500px;
+  height: 20px;
+}
+.input_area{
+  width: 500px;
+  height: 400px;
+}
+.contact{
+  margin: 5% 33%;
+  width: 60%;
+}
+.submit{
+  margin-left: 26%;
+}
+.contact_index{
+  margin: 3% 25%;
+  width: 40%;
+  background-color: #F3F3F3;
+  padding: 5%;
+}
+.message_title{
+  width: 50%;
+  font-size: 25px;
+  font-weight: 700;
+  color: #727171;
+  border-bottom: 1px solid #9FA0A0;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 3%;
+}
+.time{
+  text-align: right;
+}
+.contact_title{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #007bbb;
+  padding-top: 3%;
+}

@@ -1,0 +1,13 @@
+<div>
+  <div class="message_title">Message</div>
+  <% @contacts.each do |t| %>
+    <div class="contact_index">
+      <div class="time"><%= t.created_at %></div>
+      <div>お名前：<%= t.name %></div>
+      <div>ご連絡先：<%= t.email %></div><br>
+      <div class="messages">
+        お問い合わせ内容：<%= simple_format(t.content) %>
+      </div>
+    </div>
+  <% end %>
+</div>

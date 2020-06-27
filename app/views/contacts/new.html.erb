@@ -1,0 +1,16 @@
+<div class="contact_title">Contact</div>
+<%= form_for(@contact, :url => { controller:'contacts', action:'create'})do |f| %>
+  <div class="contact">
+    <%= f.label :お名前（任意） %><br>
+    <%= f.text_field :name,size: 80, class:"input_field" %>
+    <br>
+    <%= f.label :メールアドレス（任意） %><br>
+    <%= f.text_field :email,size: 80, class:"input_field" %>
+    <br>
+    <%= f.label :お問い合わせ内容 %><br>
+    <%= f.text_area :content,size: 80, class:"input_area" %>
+    <br>
+    <%= f.submit "送信", class:"submit" %>
+    <br>
+  </div>
+<% end %>
