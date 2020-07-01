@@ -1,6 +1,6 @@
 <div>
   <% if user_signed_in? %>
-    <% if current_user == @user || current_user.admin? %>
+    <% if current_user.admin? %>
       <%= link_to "新規投稿へ", new_top_path %>
       <% @tops.each do |t| %>
         <%= link_to "編集する", edit_top_path(t.id) %>
